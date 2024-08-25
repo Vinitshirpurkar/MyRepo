@@ -1,0 +1,14 @@
+name: Second Workflow
+on: push
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Welcome 
+      run: |
+        echo "My first hithub action"
+        ls
+        cat README.md
